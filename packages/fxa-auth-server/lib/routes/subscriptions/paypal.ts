@@ -175,6 +175,7 @@ export const paypalRoutes = (
             subscription: validators.subscriptionsStripeSubscriptionValidator,
             sourceCountry: validators.subscriptionPaymentCountryCode.required(),
           }),
+          failAction: 'log',
         },
         validate: {
           payload: {
